@@ -19,6 +19,6 @@ COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/dist /app/dist
 RUN pnpm install -g serve
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["serve", "-p", "8080", "-s", "./dist"]
+CMD ["serve", "-p", "80", "-s", "./dist"]
